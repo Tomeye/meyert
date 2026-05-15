@@ -109,8 +109,8 @@
   "footer": {
     "copy": "© 2026 Tobias Meyer · Ostfriesland",
     "links": [
-      { "text": "Impressum", "href": "#" },
-      { "text": "Datenschutz", "href": "#" }
+      { "text": "Impressum", "href": "/impressum/" },
+      { "text": "Datenschutz", "href": "/datenschutz/" }
     ]
   }
 }
