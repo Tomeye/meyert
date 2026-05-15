@@ -1,0 +1,104 @@
+{
+  "title": "meyert — webdesign aus Köln",
+  "appearance": {
+    "mood": "studio",
+    "scale": "ruhig",
+    "rotator": "plain"
+  },
+  "brand": {
+    "name": "meyert",
+    "subtitle": "webdesign"
+  },
+  "nav": {
+    "ctaText": "WhatsApp",
+    "ctaHref": "#cta"
+  },
+  "contact": {
+    "whatsappHref": "#",
+    "email": "hallo@meyert.de"
+  },
+  "hero": {
+    "tagText": "Frei ab Juli 2026",
+    "tagLocation": "Köln",
+    "pre": "Ich kümmere mich um",
+    "rotatorWords": ["Websites", "Domains", "SEO", "Google-Profile"],
+    "post": "für kleine Geschäfte in Köln.",
+    "actions": {
+      "primary": "Auf WhatsApp schreiben",
+      "secondary": "Arbeiten ansehen"
+    },
+    "note": "Festpreis ab 700 € · Antwort innerhalb 24 h",
+    "meta": [
+      { "value": "5 Jahre", "label": "Erfahrung" },
+      { "value": "30+", "label": "Geschäfte online" },
+      { "value": "ab 700 €", "label": "Festpreis" },
+      { "value": "~3 Wo.", "label": "Bis online" }
+    ]
+  },
+  "services": {
+    "title": "Was ich mache",
+    "label": "Komplett oder einzeln",
+    "items": [
+      "Website",
+      "Domain einrichten",
+      "E-Mail-Adresse",
+      "Google-Profil",
+      "SEO Grundlagen",
+      "Hosting & Wartung"
+    ]
+  },
+  "work": {
+    "title": "Bisher gemacht",
+    "label": "Vier von dreißig",
+    "items": [
+      {
+        "name": "annaschnitt.de",
+        "meta": "Salon · Köln",
+        "href": "#",
+        "thumbClass": "work-thumb-1"
+      },
+      {
+        "name": "hoffmann-brot.de",
+        "meta": "Bäcker · Bonn",
+        "href": "#",
+        "thumbClass": "work-thumb-2"
+      },
+      {
+        "name": "praxis-weiss.de",
+        "meta": "Praxis · D'dorf",
+        "href": "#",
+        "thumbClass": "work-thumb-3"
+      },
+      {
+        "name": "lenz-holz.de",
+        "meta": "Werkstatt · LEV",
+        "href": "#",
+        "thumbClass": "work-thumb-4"
+      }
+    ]
+  },
+  "about": {
+    "title": "Über mich",
+    "label": "Eine Person, keine Agentur",
+    "text": "Ich heiße Meyert, wohne in Köln und mache seit fünf Jahren Websites für kleine Geschäfte. Du schreibst mir direkt — keine Zwischenebene, kein Account-Manager.",
+    "meta": [
+      "📍 Köln",
+      "⌚ Seit 2021",
+      "🗣 Deutsch · per Du",
+      "⏱ Antwort < 24h"
+    ]
+  },
+  "ctaBanner": {
+    "headline": "Schreib mir kurz.<br />Den Rest mache ich.",
+    "buttonText": "WhatsApp öffnen",
+    "buttonHref": "#",
+    "note": "Oder per E-Mail: hallo@meyert.de"
+  },
+  "footer": {
+    "copy": "© 2026 meyert · Köln",
+    "links": [
+      { "text": "Impressum", "href": "#" },
+      { "text": "Datenschutz", "href": "#" }
+    ]
+  }
+}
