@@ -59,28 +59,32 @@
     "label": "Vier von dreißig",
     "items": [
       {
-        "name": "annaschnitt.de",
-        "meta": "Salon · Köln",
-        "href": "#",
-        "thumbClass": "work-thumb-1"
+        "name": "Brookmers Gruppe",
+        "meta": "",
+        "href": "http://happyevent.de/",
+        "thumbClass": "work-thumb-1",
+        "image": "img/brookers_mockup.png"
       },
       {
-        "name": "hoffmann-brot.de",
-        "meta": "Bäcker · Bonn",
-        "href": "#",
-        "thumbClass": "work-thumb-2"
+        "name": "Maler der Friesenjunge",
+        "meta": "",
+        "href": "https://der-friesenjunge.de/",
+        "thumbClass": "work-thumb-2",
+        "image": "img/der_friesenjunge.png"
       },
       {
-        "name": "praxis-weiss.de",
-        "meta": "Praxis · D'dorf",
-        "href": "#",
-        "thumbClass": "work-thumb-3"
+        "name": "MM Softwareoptimierung",
+        "meta": "",
+        "href": "https://mm-softwareoptimierung.de/",
+        "thumbClass": "work-thumb-3",
+        "image": "img/mm_software_optimierung.png"
       },
       {
-        "name": "lenz-holz.de",
-        "meta": "Werkstatt · LEV",
-        "href": "#",
-        "thumbClass": "work-thumb-4"
+        "name": "Sachverständigen Kurt",
+        "meta": "",
+        "href": "https://xn--sachverstndigen-kurt-jzb.de/",
+        "thumbClass": "work-thumb-4",
+        "image": "img/sachverständigen_kurt.png"
       }
     ]
   },

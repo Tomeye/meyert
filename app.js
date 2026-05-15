@@ -1,95 +1,3 @@
-const CONFIG = {
-    title: "Tobias Meyer — Softwareentwicklung in Ostfriesland",
-    appearance: {
-        mood: "studio",
-        scale: "ruhig",
-        rotator: "plain"
-    },
-    brand: {
-        name: "Tobias Meyer",
-        subtitle: "Softwareentwickler"
-    },
-    careerStart: 2018,
-    nav: {
-        ctaText: "WhatsApp",
-        ctaHref: "#cta"
-    },
-    contact: {
-        whatsappHref: "#",
-        email: "hallo@meyert.de"
-    },
-    hero: {
-        tagText: "auto",
-        tagLocation: "Ostfriesland",
-        pre: "Ich mache",
-        rotatorWords: [
-            "Websites",
-            "Domains",
-            "SEO",
-            "Google-Profile",
-            "E-Mail-Adressen"
-        ],
-        post: "für kleine Unternehmen und Startups.",
-        actions: {
-            primary: "Auf WhatsApp schreiben",
-            secondary: "Arbeiten ansehen"
-        },
-        note: "Festpreis ab 700 € · Antwort innerhalb 24 h",
-        meta: [
-            { valueKey: "yearsOfExperience", label: "Erfahrung" },
-            { value: "5+", label: "Geschäfte online" },
-            { value: "ab 700 €", label: "Festpreis" },
-            { value: "~3 Wo.", label: "Bis online" }
-        ]
-    },
-    services: {
-        title: "Was ich mache",
-        label: "Komplett oder einzeln",
-        items: [
-            "Website",
-            "Domain einrichten",
-            "E-Mail-Adresse",
-            "Google-Profil",
-            "SEO Grundlagen",
-            "Hosting & Wartung"
-        ]
-    },
-    work: {
-        title: "Bisher gemacht",
-        label: "Vier von dreißig",
-        items: [
-            { name: "annaschnitt.de", meta: "Salon · Köln", href: "#", thumbClass: "work-thumb-1" },
-            { name: "hoffmann-brot.de", meta: "Bäcker · Bonn", href: "#", thumbClass: "work-thumb-2" },
-            { name: "praxis-weiss.de", meta: "Praxis · D'dorf", href: "#", thumbClass: "work-thumb-3" },
-            { name: "lenz-holz.de", meta: "Werkstatt · LEV", href: "#", thumbClass: "work-thumb-4" }
-        ]
-    },
-    about: {
-        title: "Über mich",
-        label: "Eine Person, keine Agentur",
-        text: "Ich heiße Tobias Meyer, wohne in Ostfriesland und bin seit 2018 Softwareentwickler. Ich baue Websites und Anwendungen für kleine Unternehmen und Startups. Du arbeitest direkt mit mir zusammen — keine Zwischenebene, kein Account-Manager.",
-        meta: [
-            "📍 Ostfriesland",
-            "⌚ Seit 2018",
-            "🗣 Deutsch · per Du",
-            "⏱ Antwort < 24h"
-        ]
-    },
-    ctaBanner: {
-        headline: "Schreib mir kurz.<br />Den Rest mache ich.",
-        buttonText: "WhatsApp öffnen",
-        buttonHref: "#",
-        note: "Oder per E-Mail: hallo@meyert.de"
-    },
-    footer: {
-        copy: "© 2026 Tobias Meyer · Ostfriesland",
-        links: [
-            { text: "Impressum", href: "#" },
-            { text: "Datenschutz", href: "#" }
-        ]
-    }
-};
-
 const TWEAKS = {
     mood: "studio",
     scale: "ruhig",
@@ -158,7 +66,7 @@ function renderWork(items) {
     if (!container || !Array.isArray(items)) return;
     container.innerHTML = items.map(item => `
       <a class="work-card" href="${item.href}">
-        <div class="work-thumb ${item.thumbClass}"></div>
+        <div class="work-thumb ${item.thumbClass}"${item.image ? ` style="background-image:url('${item.image}');background-size:cover;background-position:center;"` : ''}></div>
         <div class="work-info"><span class="name">${item.name}</span><span class="meta">${item.meta}</span></div>
       </a>
     `).join('');
@@ -271,9 +179,6 @@ function applyTweaks() {
     b.dataset.rotator = TWEAKS.rotator;
 }
 
-populatePage(CONFIG);
-applyTweaks();
-
 // CTA tap feedback
 function attachCtaFeedback() {
     document.querySelectorAll('.cta-primary').forEach(b => {
@@ -287,4 +192,10 @@ function attachCtaFeedback() {
     });
 }
 
-attachCtaFeedback();
+fetch('config.json')
+    .then(r => r.json())
+    .then(config => {
+        populatePage(config);
+        applyTweaks();
+        attachCtaFeedback();
+    });

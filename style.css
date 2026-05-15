@@ -618,19 +618,19 @@ nav {
 }
 
 .work-thumb-1 {
-    background: linear-gradient(135deg, #e8d6c5 0%, #c89372 100%);
+    background-image: linear-gradient(135deg, #e8d6c5 0%, #c89372 100%);
 }
 
 .work-thumb-2 {
-    background: linear-gradient(135deg, #efe2c4 0%, #d4a85a 100%);
+    background-image: linear-gradient(135deg, #efe2c4 0%, #d4a85a 100%);
 }
 
 .work-thumb-3 {
-    background: linear-gradient(135deg, #cfdce6 0%, #6f95b3 100%);
+    background-image: linear-gradient(135deg, #cfdce6 0%, #6f95b3 100%);
 }
 
 .work-thumb-4 {
-    background: linear-gradient(135deg, #d1d9c5 0%, #7a8a5a 100%);
+    background-image: linear-gradient(135deg, #d1d9c5 0%, #7a8a5a 100%);
 }
 
 .work-info {
