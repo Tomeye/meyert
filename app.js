@@ -22,15 +22,35 @@ function setLink(id, href) {
     if (el) el.href = href;
 }
 
-function renderHeroMeta(items) {
+function calculateYears(startYear) {
+    return new Date().getFullYear() - startYear;
+}
+
+function getNextMonthText() {
+    const today = new Date();
+    const nextMonth = new Date(today.getFullYear(), today.getMonth() + 1, 1);
+    const months = ['Januar', 'Februar', 'März', 'April', 'Mai', 'Juni', 'Juli', 'August', 'September', 'Oktober', 'November', 'Dezember'];
+    const monthName = months[nextMonth.getMonth()];
+    const year = nextMonth.getFullYear();
+    return `Frei ab ${monthName} ${year}`;
+}
+
+function renderHeroMeta(items, config) {
     const container = document.querySelector('.hero-meta');
     if (!container || !Array.isArray(items)) return;
-    container.innerHTML = items.map(item => `
+    container.innerHTML = items.map(item => {
+        let value = item.value;
+        if (item.valueKey === 'yearsOfExperience' && config && config.careerStart) {
+            const years = calculateYears(config.careerStart);
+            value = `${years} ${years === 1 ? 'Jahr' : 'Jahre'}`;
+        }
+        return `
         <div>
-          <span class="hero-meta-num">${item.value}</span>
+          <span class="hero-meta-num">${value}</span>
           <span class="hero-meta-lab">${item.label}</span>
         </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 function renderServices(services) {
@@ -88,7 +108,8 @@ function populatePage(config) {
     }
 
     if (config.hero) {
-        setText('hero-tag-text', config.hero.tagText);
+        const tagText = config.hero.tagText === 'auto' ? getNextMonthText() : config.hero.tagText;
+        setText('hero-tag-text', tagText);
         setText('hero-tag-location', config.hero.tagLocation);
         setText('hero-pre', config.hero.pre);
         if (Array.isArray(config.hero.rotatorWords) && config.hero.rotatorWords.length) {
@@ -115,7 +136,7 @@ function populatePage(config) {
         setText('wa-text', config.hero.actions.primary);
         setText('secondary-action-text', config.hero.actions.secondary);
         setText('hero-note', config.hero.note);
-        renderHeroMeta(config.hero.meta);
+        renderHeroMeta(config.hero.meta, config);
     }
 
     if (config.services) {
