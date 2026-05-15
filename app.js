@@ -96,7 +96,7 @@ function populatePage(config) {
 
     if (config.nav) {
         setText('nav-cta-text', config.nav.ctaText);
-        setLink('nav-cta-link', config.nav.ctaHref);
+        setLink('nav-cta-link', config.contact?.whatsappHref || config.nav.ctaHref);
     }
 
     if (config.contact) {
@@ -158,7 +158,7 @@ function populatePage(config) {
     if (config.ctaBanner) {
         setHtml('cta-banner-headline', config.ctaBanner.headline);
         setText('cta-banner-button-text', config.ctaBanner.buttonText);
-        setLink('cta-banner-button', config.ctaBanner.buttonHref);
+        setLink('cta-banner-button', config.contact?.whatsappHref || config.ctaBanner.buttonHref);
         setText('cta-banner-note', config.ctaBanner.note);
     }
 

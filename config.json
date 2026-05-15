@@ -15,8 +15,9 @@
     "ctaHref": "#cta"
   },
   "contact": {
-    "whatsappHref": "#",
-    "email": "hallo@meyert.de"
+    "whatsappHref": "https://wa.me/491749079739",
+    "phone": "01749079739",
+    "email": "meyer.tobias96@gmail.com"
   },
   "hero": {
     "tagText": "auto",
@@ -103,7 +104,7 @@
     "headline": "Schreib mir kurz.<br />Den Rest mache ich.",
     "buttonText": "WhatsApp öffnen",
     "buttonHref": "#",
-    "note": "Oder per E-Mail: hallo@meyert.de"
+    "note": "Oder per E-Mail: meyer.tobias96@gmail.com"
   },
   "footer": {
     "copy": "© 2026 Tobias Meyer · Ostfriesland",
