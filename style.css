@@ -196,6 +196,10 @@ nav {
     background: var(--whatsapp);
 }
 
+.nav-cta-icon {
+    display: none;
+}
+
 /* Hero */
 .hero {
     position: relative;
@@ -833,11 +837,22 @@ footer a:hover {
         align-items: flex-start;
     }
 
-    .nav-cta span:not(.nav-cta-dot) {
+    #nav-cta-text,
+    .nav-cta-dot {
         display: none;
     }
 
+    .nav-cta-icon {
+        display: flex;
+    }
+
     .nav-cta {
+        background: var(--whatsapp);
+        color: white;
         padding: 9px 12px;
+    }
+
+    .nav-cta:hover {
+        background: #1da851;
     }
 }
