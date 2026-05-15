@@ -1,11 +1,100 @@
-const CONFIG_URL = './config.json';
+const CONFIG = {
+    title: "Tobias Meyer — Softwareentwicklung in Ostfriesland",
+    appearance: {
+        mood: "studio",
+        scale: "ruhig",
+        rotator: "plain"
+    },
+    brand: {
+        name: "Tobias Meyer",
+        subtitle: "Softwareentwickler"
+    },
+    careerStart: 2018,
+    nav: {
+        ctaText: "WhatsApp",
+        ctaHref: "#cta"
+    },
+    contact: {
+        whatsappHref: "#",
+        email: "hallo@meyert.de"
+    },
+    hero: {
+        tagText: "auto",
+        tagLocation: "Ostfriesland",
+        pre: "Ich mache",
+        rotatorWords: [
+            "Websites",
+            "Domains",
+            "SEO",
+            "Google-Profile",
+            "E-Mail-Adressen"
+        ],
+        post: "für kleine Unternehmen und Startups.",
+        actions: {
+            primary: "Auf WhatsApp schreiben",
+            secondary: "Arbeiten ansehen"
+        },
+        note: "Festpreis ab 700 € · Antwort innerhalb 24 h",
+        meta: [
+            { valueKey: "yearsOfExperience", label: "Erfahrung" },
+            { value: "5+", label: "Geschäfte online" },
+            { value: "ab 700 €", label: "Festpreis" },
+            { value: "~3 Wo.", label: "Bis online" }
+        ]
+    },
+    services: {
+        title: "Was ich mache",
+        label: "Komplett oder einzeln",
+        items: [
+            "Website",
+            "Domain einrichten",
+            "E-Mail-Adresse",
+            "Google-Profil",
+            "SEO Grundlagen",
+            "Hosting & Wartung"
+        ]
+    },
+    work: {
+        title: "Bisher gemacht",
+        label: "Vier von dreißig",
+        items: [
+            { name: "annaschnitt.de", meta: "Salon · Köln", href: "#", thumbClass: "work-thumb-1" },
+            { name: "hoffmann-brot.de", meta: "Bäcker · Bonn", href: "#", thumbClass: "work-thumb-2" },
+            { name: "praxis-weiss.de", meta: "Praxis · D'dorf", href: "#", thumbClass: "work-thumb-3" },
+            { name: "lenz-holz.de", meta: "Werkstatt · LEV", href: "#", thumbClass: "work-thumb-4" }
+        ]
+    },
+    about: {
+        title: "Über mich",
+        label: "Eine Person, keine Agentur",
+        text: "Ich heiße Tobias Meyer, wohne in Ostfriesland und bin seit 2018 Softwareentwickler. Ich baue Websites und Anwendungen für kleine Unternehmen und Startups. Du arbeitest direkt mit mir zusammen — keine Zwischenebene, kein Account-Manager.",
+        meta: [
+            "📍 Ostfriesland",
+            "⌚ Seit 2018",
+            "🗣 Deutsch · per Du",
+            "⏱ Antwort < 24h"
+        ]
+    },
+    ctaBanner: {
+        headline: "Schreib mir kurz.<br />Den Rest mache ich.",
+        buttonText: "WhatsApp öffnen",
+        buttonHref: "#",
+        note: "Oder per E-Mail: hallo@meyert.de"
+    },
+    footer: {
+        copy: "© 2026 Tobias Meyer · Ostfriesland",
+        links: [
+            { text: "Impressum", href: "#" },
+            { text: "Datenschutz", href: "#" }
+        ]
+    }
+};
 
-// === Tweaks state ===
-const TWEAKS = /*EDITMODE-BEGIN*/{
-    "mood": "studio",
-    "scale": "ruhig",
-    "rotator": "plain"
-}/*EDITMODE-END*/;
+const TWEAKS = {
+    mood: "studio",
+    scale: "ruhig",
+    rotator: "plain"
+};
 
 function setText(id, text) {
     const el = document.getElementById(id);
@@ -175,120 +264,15 @@ function populatePage(config) {
     }
 }
 
-function getConfig() {
-    return fetch(CONFIG_URL)
-        .then((response) => {
-            if (!response.ok) throw new Error('Failed to load config');
-            return response.json();
-        })
-        .catch(() => {
-            return {
-                title: document.title,
-                appearance: TWEAKS,
-                brand: { name: 'meyert', subtitle: 'webdesign' },
-                nav: { ctaText: 'WhatsApp', ctaHref: '#cta' },
-                contact: { whatsappHref: '#', email: 'hallo@meyert.de' },
-                hero: {
-                    tagText: 'Frei ab Juli 2026',
-                    tagLocation: 'Köln',
-                    pre: 'Ich kümmere mich um',
-                    rotatorWords: ['Websites', 'Domains', 'SEO', 'Google-Profile'],
-                    post: 'für kleine Geschäfte in Köln.',
-                    actions: { primary: 'Auf WhatsApp schreiben', secondary: 'Arbeiten ansehen' },
-                    note: 'Festpreis ab 700 € · Antwort innerhalb 24 h',
-                    meta: [
-                        { value: '5 Jahre', label: 'Erfahrung' },
-                        { value: '30+', label: 'Geschäfte online' },
-                        { value: 'ab 700 €', label: 'Festpreis' },
-                        { value: '~3 Wo.', label: 'Bis online' }
-                    ]
-                },
-                services: {
-                    title: 'Was ich mache',
-                    label: 'Komplett oder einzeln',
-                    items: ['Website', 'Domain einrichten', 'E-Mail-Adresse', 'Google-Profil', 'SEO Grundlagen', 'Hosting & Wartung']
-                },
-                work: {
-                    title: 'Bisher gemacht',
-                    label: 'Vier von dreißig',
-                    items: [
-                        { name: 'annaschnitt.de', meta: 'Salon · Köln', href: '#', thumbClass: 'work-thumb-1' },
-                        { name: 'hoffmann-brot.de', meta: 'Bäcker · Bonn', href: '#', thumbClass: 'work-thumb-2' },
-                        { name: 'praxis-weiss.de', meta: 'Praxis · D\'dorf', href: '#', thumbClass: 'work-thumb-3' },
-                        { name: 'lenz-holz.de', meta: 'Werkstatt · LEV', href: '#', thumbClass: 'work-thumb-4' }
-                    ]
-                },
-                about: {
-                    title: 'Über mich',
-                    label: 'Eine Person, keine Agentur',
-                    text: 'Ich heiße Meyert, wohne in Köln und mache seit fünf Jahren Websites für kleine Geschäfte. Du schreibst mir direkt — keine Zwischenebene, kein Account-Manager.',
-                    meta: ['📍 Köln', '⌚ Seit 2021', '🗣 Deutsch · per Du', '⏱ Antwort < 24h']
-                },
-                ctaBanner: {
-                    headline: 'Schreib mir kurz.<br />Den Rest mache ich.',
-                    buttonText: 'WhatsApp öffnen',
-                    buttonHref: '#',
-                    note: 'Oder per E-Mail: hallo@meyert.de'
-                },
-                footer: {
-                    copy: '© 2026 meyert · Köln',
-                    links: [{ text: 'Impressum', href: '#' }, { text: 'Datenschutz', href: '#' }]
-                }
-            };
-        });
-}
-
 function applyTweaks() {
     const b = document.body;
     b.dataset.mood = TWEAKS.mood;
     b.dataset.scale = TWEAKS.scale;
     b.dataset.rotator = TWEAKS.rotator;
-    document.querySelectorAll('#tp .tp-radio').forEach(r => {
-        const key = r.dataset.key;
-        r.querySelectorAll('.tp-opt').forEach(o => {
-            o.classList.toggle('is-active', o.dataset.val === TWEAKS[key]);
-        });
-    });
 }
 
-function setTweak(key, val) {
-    TWEAKS[key] = val;
-    applyTweaks();
-    try {
-        window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: val } }, '*');
-    } catch (e) { }
-}
-
-// Wire panel
-const panel = document.getElementById('tp');
-document.getElementById('tp-close').addEventListener('click', () => {
-    panel.classList.remove('is-visible');
-    setTimeout(() => panel.classList.remove('is-open'), 250);
-    try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch (e) { }
-});
-document.querySelectorAll('#tp .tp-opt').forEach(o => {
-    o.addEventListener('click', () => {
-        const key = o.parentElement.dataset.key;
-        setTweak(key, o.dataset.val);
-    });
-});
-
-// Edit mode protocol — register listener FIRST, then announce
-window.addEventListener('message', (e) => {
-    const msg = e.data;
-    if (!msg || !msg.type) return;
-    if (msg.type === '__activate_edit_mode') {
-        panel.classList.add('is-open');
-        requestAnimationFrame(() => panel.classList.add('is-visible'));
-    }
-    if (msg.type === '__deactivate_edit_mode') {
-        panel.classList.remove('is-visible');
-        setTimeout(() => panel.classList.remove('is-open'), 250);
-    }
-});
-try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch (e) { }
-
-getConfig().then(populatePage).finally(applyTweaks);
+populatePage(CONFIG);
+applyTweaks();
 
 // CTA tap feedback
 function attachCtaFeedback() {
