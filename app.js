@@ -153,6 +153,7 @@ function populatePage(config) {
         setText('about-label', config.about.label);
         setText('about-text', config.about.text);
         renderAboutMeta(config.about.meta);
+        if (config.about.regionNote) setText('about-regions', config.about.regionNote);
     }
 
     if (config.ctaBanner) {

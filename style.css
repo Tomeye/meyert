@@ -906,6 +906,134 @@ footer a:hover {
     opacity: 0.72;
 }
 
+/* Branchen */
+.branchen-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 22px;
+}
+
+.branche-tag {
+    font-size: 13px;
+    font-weight: 500;
+    padding: 7px 15px;
+    background: var(--soft);
+    border-radius: 999px;
+    color: var(--ink);
+    border: 1px solid var(--line);
+    letter-spacing: 0.01em;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.branche-tag:hover {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+}
+
+.branchen-note {
+    font-size: 15px;
+    color: var(--muted);
+    margin: 0;
+    max-width: 580px;
+    line-height: 1.55;
+}
+
+/* About regions */
+.about-regions {
+    font-size: 13px;
+    color: var(--muted);
+    line-height: 1.7;
+    margin: 0;
+    padding-top: 18px;
+    border-top: 1px solid var(--line);
+    letter-spacing: 0.01em;
+}
+
+/* FAQ */
+.faq-list {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid var(--line);
+    border-radius: 16px;
+    overflow: hidden;
+    max-width: 700px;
+}
+
+.faq-item {
+    border-bottom: 1px solid var(--line);
+    transition: background 0.2s;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-question {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 20px 24px;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    transition: background 0.18s;
+    letter-spacing: -0.01em;
+}
+
+.faq-question::-webkit-details-marker {
+    display: none;
+}
+
+.faq-question::after {
+    content: "+";
+    font-size: 22px;
+    font-weight: 300;
+    color: var(--muted);
+    flex-shrink: 0;
+    transition: transform 0.22s ease, color 0.18s;
+    line-height: 1;
+}
+
+.faq-item[open] > .faq-question {
+    background: var(--soft);
+}
+
+.faq-item[open] > .faq-question::after {
+    transform: rotate(45deg);
+    color: var(--ink);
+}
+
+.faq-question:hover {
+    background: var(--soft);
+}
+
+.faq-answer {
+    padding: 0 24px 22px;
+    background: var(--soft);
+}
+
+.faq-answer p {
+    font-size: 15px;
+    line-height: 1.65;
+    color: var(--muted);
+    margin: 0;
+}
+
+@media (max-width: 640px) {
+    .faq-question {
+        padding: 16px 18px;
+        font-size: 15px;
+    }
+
+    .faq-answer {
+        padding: 0 18px 18px;
+    }
+}
+
 /* Contact form */
 .contact-form {
     display: flex;
