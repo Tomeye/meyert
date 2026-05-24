@@ -1,23 +1,28 @@
 {
-  "title": "Tobias Meyer — Softwareentwicklung in Ostfriesland",
+  "title": "Webdesign Leer · Ostfriesland | meyert",
   "appearance": {
     "mood": "studio",
     "scale": "ruhig",
     "rotator": "plain"
   },
   "brand": {
+    "name": "meyert",
+    "subtitle": "webdesign"
+  },
+  "owner": {
     "name": "Tobias Meyer",
-    "subtitle": "Softwareentwickler"
+    "address": {
+      "street": "Mühlenstraße 114",
+      "city": "26789 Leer"
+    },
+    "phone": "+49 174 9079739",
+    "phoneHref": "tel:+491749079739",
+    "email": "meyer.tobias96@gmail.com"
   },
   "careerStart": 2018,
   "nav": {
-    "ctaText": "WhatsApp",
-    "ctaHref": "#cta"
-  },
-  "contact": {
-    "whatsappHref": "https://wa.me/491749079739",
-    "phone": "01749079739",
-    "email": "meyer.tobias96@gmail.com"
+    "ctaText": "Anfrage",
+    "ctaHref": "#kontakt"
   },
   "hero": {
     "tagText": "auto",
@@ -25,34 +30,32 @@
     "pre": "Ich mache",
     "rotatorWords": [
       "Websites",
-      "Domains",
-      "SEO",
-      "Google-Profile",
-      "E-Mail-Adressen"
+      "Homepages",
+      "Webseiten"
     ],
-    "post": "für kleine Unternehmen und Startups.",
+    "post": "für Handwerker, Läden und Selbstständige in Leer, Emden, Aurich und ganz Ostfriesland.",
     "actions": {
-      "primary": "Auf WhatsApp schreiben",
+      "primary": "Anfrage stellen",
       "secondary": "Arbeiten ansehen"
     },
-    "note": "Festpreis ab 700 € · Antwort innerhalb 24 h",
+    "note": "Einfache Website ab 400 € · Antwort innerhalb 24 h",
     "meta": [
       { "valueKey": "yearsOfExperience", "label": "Erfahrung" },
-      { "value": "5+", "label": "Geschäfte online" },
-      { "value": "ab 700 €", "label": "Festpreis" },
-      { "value": "~3 Wo.", "label": "Bis online" }
+      { "value": "30+", "label": "Projekte" },
+      { "value": "ab 400 €", "label": "Festpreis" },
+      { "value": "~2 Wo.", "label": "Bis online" }
     ]
   },
   "services": {
-    "title": "Was ich mache",
-    "label": "Komplett oder einzeln",
+    "title": "Was du bekommst",
+    "label": "Alles aus einer Hand",
     "items": [
-      "Website",
-      "Domain einrichten",
-      "E-Mail-Adresse",
-      "Google-Profil",
-      "SEO Grundlagen",
-      "Hosting & Wartung"
+      { "name": "Professionelle Website", "desc": "Sauber gestaltet, schnell geladen, auf jedem Gerät" },
+      { "name": "Mobiloptimiert", "desc": "Funktioniert auf Smartphone, Tablet und Desktop" },
+      { "name": "Impressum & Datenschutz", "desc": "Rechtssicher von Anfang an — kein Stress mit dem Kleingedruckten" },
+      { "name": "Domain & Hosting", "desc": "Komplett eingerichtet, du musst dich um nichts kümmern" },
+      { "name": "Festpreis", "desc": "Klare Absprache, keine versteckten Kosten" },
+      { "name": "Persönliche Betreuung", "desc": "Direkt mit mir — keine Agentur, kein Mittelsmann" }
     ]
   },
   "work": {
@@ -92,9 +95,9 @@
   "about": {
     "title": "Über mich",
     "label": "Eine Person, keine Agentur",
-    "text": "Ich heiße Tobias Meyer, wohne in Ostfriesland und bin seit 2018 Softwareentwickler. Ich baue Websites und Anwendungen für kleine Unternehmen und Startups. Du arbeitest direkt mit mir zusammen — keine Zwischenebene, kein Account-Manager.",
+    "text": "Ich heiße Tobias Meyer und mache Webdesign aus Leer — für kleine Unternehmen, Handwerker und Selbstständige in Ostfriesland: Leer, Emden, Aurich, Norden und Umgebung. Seit 2018 baue ich Websites, die gut aussehen und gefunden werden. Du arbeitest direkt mit mir zusammen — keine Zwischenebene, kein Account-Manager.",
     "meta": [
-      "📍 Ostfriesland",
+      "📍 Leer, Ostfriesland",
       "⌚ Seit 2018",
       "🗣 Deutsch · per Du",
       "⏱ Antwort < 24h"
@@ -102,12 +105,12 @@
   },
   "ctaBanner": {
     "headline": "Schreib mir kurz.<br />Den Rest mache ich.",
-    "buttonText": "WhatsApp öffnen",
-    "buttonHref": "#",
-    "note": "Oder per E-Mail: meyer.tobias96@gmail.com"
+    "buttonText": "Anfrage stellen",
+    "buttonHref": "#kontakt",
+    "note": ""
   },
   "footer": {
-    "copy": "© 2026 Tobias Meyer · Ostfriesland",
+    "copy": "© 2026 Tobias Meyer · Leer, Ostfriesland",
     "links": [
       { "text": "Impressum", "href": "/impressum/" },
       { "text": "Datenschutz", "href": "/datenschutz/" }

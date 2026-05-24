@@ -53,12 +53,17 @@ function renderHeroMeta(items, config) {
 function renderServices(services) {
     const container = document.getElementById('services-list');
     if (!container || !Array.isArray(services)) return;
-    container.innerHTML = services.map((service, index) => `
+    container.innerHTML = services.map((service, index) => {
+        const name = typeof service === 'object' ? service.name : service;
+        const desc = typeof service === 'object' ? service.desc : '';
+        return `
       <div class="service">
         <div class="service-top"><span class="service-tag">${String(index + 1).padStart(2, '0')}</span></div>
-        <div class="service-name">${service}</div>
+        <div class="service-name">${name}</div>
+        ${desc ? `<div class="service-desc">${desc}</div>` : ''}
       </div>
-    `).join('');
+    `;
+    }).join('');
 }
 
 function renderWork(items) {
@@ -96,12 +101,7 @@ function populatePage(config) {
 
     if (config.nav) {
         setText('nav-cta-text', config.nav.ctaText);
-        setLink('nav-cta-link', config.contact?.whatsappHref || config.nav.ctaHref);
-    }
-
-    if (config.contact) {
-        setLink('wa', config.contact.whatsappHref);
-        setHtml('cta-banner-note', `Oder per E-Mail: ${config.contact.email}`);
+        setLink('nav-cta-link', config.nav.ctaHref);
     }
 
     if (config.hero) {
@@ -130,7 +130,7 @@ function populatePage(config) {
             setInterval(rotate, 2600);
         }
         setText('hero-post', config.hero.post);
-        setText('wa-text', config.hero.actions.primary);
+        setText('hero-cta-text', config.hero.actions.primary);
         setText('secondary-action-text', config.hero.actions.secondary);
         setText('hero-note', config.hero.note);
         renderHeroMeta(config.hero.meta, config);
@@ -158,8 +158,9 @@ function populatePage(config) {
     if (config.ctaBanner) {
         setHtml('cta-banner-headline', config.ctaBanner.headline);
         setText('cta-banner-button-text', config.ctaBanner.buttonText);
-        setLink('cta-banner-button', config.contact?.whatsappHref || config.ctaBanner.buttonHref);
-        setText('cta-banner-note', config.ctaBanner.note);
+        setLink('cta-banner-button', config.ctaBanner.buttonHref);
+        const note = config.ctaBanner.note || (config.owner?.email ? `Oder per E-Mail: ${config.owner.email}` : '');
+        setText('cta-banner-note', note);
     }
 
     if (config.footer) {
