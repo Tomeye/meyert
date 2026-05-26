@@ -312,6 +312,11 @@ nav {
     margin-bottom: 10px;
 }
 
+.hero-headline .hero-pre {
+    flex-basis: 100%;
+    margin-bottom: 0;
+}
+
 .hero-post {
     margin-top: 16px;
     max-width: 560px;

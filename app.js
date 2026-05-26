@@ -50,33 +50,6 @@ function renderHeroMeta(items, config) {
     }).join('');
 }
 
-function renderServices(services) {
-    const container = document.getElementById('services-list');
-    if (!container || !Array.isArray(services)) return;
-    container.innerHTML = services.map((service, index) => {
-        const name = typeof service === 'object' ? service.name : service;
-        const desc = typeof service === 'object' ? service.desc : '';
-        return `
-      <div class="service">
-        <div class="service-top"><span class="service-tag">${String(index + 1).padStart(2, '0')}</span></div>
-        <div class="service-name">${name}</div>
-        ${desc ? `<div class="service-desc">${desc}</div>` : ''}
-      </div>
-    `;
-    }).join('');
-}
-
-function renderWork(items) {
-    const container = document.getElementById('work-grid');
-    if (!container || !Array.isArray(items)) return;
-    container.innerHTML = items.map(item => `
-      <a class="work-card" href="${item.href}">
-        <div class="work-thumb ${item.thumbClass}"${item.image ? ` style="background-image:url('${item.image}');background-size:cover;background-position:center;"` : ''}></div>
-        <div class="work-info"><span class="name">${item.name}</span><span class="meta">${item.meta}</span></div>
-      </a>
-    `).join('');
-}
-
 function renderAboutMeta(items) {
     const container = document.getElementById('about-meta');
     if (!container || !Array.isArray(items)) return;
@@ -134,18 +107,6 @@ function populatePage(config) {
         setText('secondary-action-text', config.hero.actions.secondary);
         setText('hero-note', config.hero.note);
         renderHeroMeta(config.hero.meta, config);
-    }
-
-    if (config.services) {
-        setText('services-title', config.services.title);
-        setText('services-label', config.services.label);
-        renderServices(config.services.items);
-    }
-
-    if (config.work) {
-        setText('work-title', config.work.title);
-        setText('work-label', config.work.label);
-        renderWork(config.work.items);
     }
 
     if (config.about) {

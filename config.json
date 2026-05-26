@@ -27,7 +27,7 @@
   "hero": {
     "tagText": "auto",
     "tagLocation": "Ostfriesland",
-    "pre": "Webdesign aus Leer",
+    "pre": "Webdesign Leer",
     "rotatorWords": [
       "Websites",
       "Homepages",
@@ -44,52 +44,6 @@
       { "value": "30+", "label": "Projekte" },
       { "value": "ab 400 €", "label": "Festpreis" },
       { "value": "~2 Wo.", "label": "Bis online" }
-    ]
-  },
-  "services": {
-    "title": "Was du bekommst",
-    "label": "Alles aus einer Hand",
-    "items": [
-      { "name": "Professionelle Website", "desc": "Sauber gestaltet, schnell geladen, auf jedem Gerät" },
-      { "name": "Mobiloptimiert", "desc": "Funktioniert auf Smartphone, Tablet und Desktop" },
-      { "name": "Impressum & Datenschutz", "desc": "Rechtssicher von Anfang an — kein Stress mit dem Kleingedruckten" },
-      { "name": "Domain & Hosting", "desc": "Komplett eingerichtet, du musst dich um nichts kümmern" },
-      { "name": "Festpreis", "desc": "Klare Absprache, keine versteckten Kosten" },
-      { "name": "Persönliche Betreuung", "desc": "Direkt mit mir — keine Agentur, kein Mittelsmann" }
-    ]
-  },
-  "work": {
-    "title": "Bisher gemacht",
-    "label": "Vier von dreißig",
-    "items": [
-      {
-        "name": "Brookmers Gruppe",
-        "meta": "",
-        "href": "http://happyevent.de/",
-        "thumbClass": "work-thumb-1",
-        "image": "img/brookers_mockup.png"
-      },
-      {
-        "name": "Maler der Friesenjunge",
-        "meta": "",
-        "href": "https://der-friesenjunge.de/",
-        "thumbClass": "work-thumb-2",
-        "image": "img/der_friesenjunge.png"
-      },
-      {
-        "name": "MM Softwareoptimierung",
-        "meta": "",
-        "href": "https://mm-softwareoptimierung.de/",
-        "thumbClass": "work-thumb-3",
-        "image": "img/mm_software_optimierung.png"
-      },
-      {
-        "name": "Sachverständigen Kurt",
-        "meta": "",
-        "href": "https://xn--sachverstndigen-kurt-jzb.de/",
-        "thumbClass": "work-thumb-4",
-        "image": "img/sachverständigen_kurt.png"
-      }
     ]
   },
   "about": {
