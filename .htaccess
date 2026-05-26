@@ -7,3 +7,81 @@ RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
 # www → non-www weiterleiten
 RewriteCond %{HTTP_HOST} ^www\.meyert\.tech$ [NC]
 RewriteRule ^(.*)$ https://meyert.tech/$1 [R=301,L]
+
+# ---------------------------------------------------------
+# Komprimierung (mod_deflate)
+# ---------------------------------------------------------
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/css application/javascript application/json text/javascript text/plain text/xml application/xml image/svg+xml
+    BrowserMatch ^Mozilla/4 gzip-only-text/html
+    BrowserMatch ^Mozilla/4\.0[678] no-gzip
+    BrowserMatch \bMSIE !no-gzip !gzip-only-text/html
+</IfModule>
+
+# ---------------------------------------------------------
+# Caching (mod_expires)
+# ---------------------------------------------------------
+<IfModule mod_expires.c>
+    ExpiresActive On
+
+    # HTML & JSON — kurz cachen, damit Änderungen schnell ankommen
+    ExpiresByType text/html                  "access plus 1 hour"
+    ExpiresByType application/json           "access plus 1 hour"
+
+    # CSS & JS — 1 Woche
+    ExpiresByType text/css                   "access plus 1 week"
+    ExpiresByType application/javascript     "access plus 1 week"
+    ExpiresByType text/javascript            "access plus 1 week"
+
+    # Bilder — 1 Jahr
+    ExpiresByType image/png                  "access plus 1 year"
+    ExpiresByType image/webp                 "access plus 1 year"
+    ExpiresByType image/svg+xml              "access plus 1 year"
+    ExpiresByType image/jpeg                 "access plus 1 year"
+    ExpiresByType image/gif                  "access plus 1 year"
+    ExpiresByType image/x-icon              "access plus 1 year"
+
+    # Fonts
+    ExpiresByType font/woff2                 "access plus 1 year"
+    ExpiresByType font/woff                  "access plus 1 year"
+
+    # Sitemap & robots
+    ExpiresByType application/xml            "access plus 1 day"
+    ExpiresByType text/plain                 "access plus 1 day"
+</IfModule>
+
+# Cache-Control-Header (Fallback via mod_headers)
+<IfModule mod_headers.c>
+    # Bilder — unveränderlich für 1 Jahr
+    <FilesMatch "\.(png|webp|svg|jpg|jpeg|gif|ico)$">
+        Header set Cache-Control "public, max-age=31536000, immutable"
+    </FilesMatch>
+
+    # CSS & JS — 1 Woche
+    <FilesMatch "\.(css|js)$">
+        Header set Cache-Control "public, max-age=604800"
+    </FilesMatch>
+
+    # HTML & JSON — kein Proxy-Cache, Revalidierung
+    <FilesMatch "\.(html|json)$">
+        Header set Cache-Control "no-cache, must-revalidate"
+    </FilesMatch>
+</IfModule>
+
+# ---------------------------------------------------------
+# Sicherheits-Header
+# ---------------------------------------------------------
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "SAMEORIGIN"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ---------------------------------------------------------
+# ETag deaktivieren (vermeidet doppelte Validierungsanfragen)
+# ---------------------------------------------------------
+<IfModule mod_headers.c>
+    Header unset ETag
+</IfModule>
+FileETag None

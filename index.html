@@ -10,6 +10,12 @@
 
   <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 
+  <!-- Resource hints -->
+  <link rel="preconnect" href="https://unpkg.com" crossorigin>
+  <link rel="dns-prefetch" href="https://unpkg.com">
+  <link rel="preload" href="config.json" as="fetch" crossorigin="anonymous">
+  <meta name="theme-color" content="#fafaf6">
+
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://meyert.tech/" />
   <meta property="og:title" content="Webdesign Leer · Ostfriesland | meyert — Homepage ab 400 €" />
@@ -99,7 +105,7 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 
-<body data-mood="frisch" data-scale="buehne" data-rotator="plain">
+<body data-mood="studio" data-scale="ruhig" data-rotator="plain">
 
   <nav class="reveal r1">
     <a class="brand" href="/" id="brand-name">meyert <small id="brand-sub">· webdesign</small></a>
@@ -245,19 +251,27 @@
     </div>
     <div class="work-grid" id="work-grid">
       <a class="work-card" href="http://happyevent.de/" target="_blank" rel="noopener noreferrer">
-        <div class="work-thumb work-thumb-1" style="background-image:url('img/brookers_mockup.png');background-size:cover;background-position:center;"></div>
+        <div class="work-thumb work-thumb-1">
+          <img src="img/brookers_mockup.png" alt="Brookmers Gruppe Website" loading="lazy" decoding="async" width="900" height="504">
+        </div>
         <div class="work-info"><span class="name">Brookmers Gruppe</span><span class="meta">happyevent.de</span></div>
       </a>
       <a class="work-card" href="https://der-friesenjunge.de/" target="_blank" rel="noopener noreferrer">
-        <div class="work-thumb work-thumb-2" style="background-image:url('img/der_friesenjunge.png');background-size:cover;background-position:center;"></div>
+        <div class="work-thumb work-thumb-2">
+          <img src="img/der_friesenjunge.png" alt="Maler der Friesenjunge Website" loading="lazy" decoding="async" width="900" height="504">
+        </div>
         <div class="work-info"><span class="name">Maler der Friesenjunge</span><span class="meta">der-friesenjunge.de</span></div>
       </a>
       <a class="work-card" href="https://mm-softwareoptimierung.de/" target="_blank" rel="noopener noreferrer">
-        <div class="work-thumb work-thumb-3" style="background-image:url('img/mm_software_optimierung.png');background-size:cover;background-position:center;"></div>
+        <div class="work-thumb work-thumb-3">
+          <img src="img/mm_software_optimierung.png" alt="MM Softwareoptimierung Website" loading="lazy" decoding="async" width="900" height="504">
+        </div>
         <div class="work-info"><span class="name">MM Softwareoptimierung</span><span class="meta">mm-softwareoptimierung.de</span></div>
       </a>
       <a class="work-card" href="https://xn--sachverstndigen-kurt-jzb.de/" target="_blank" rel="noopener noreferrer">
-        <div class="work-thumb work-thumb-4" style="background-image:url('img/sachverständigen_kurt.png');background-size:cover;background-position:center;"></div>
+        <div class="work-thumb work-thumb-4">
+          <img src="img/sachverstaendigen_kurt.png" alt="Sachverständigen Kurt Website" loading="lazy" decoding="async" width="900" height="504">
+        </div>
         <div class="work-info"><span class="name">Sachverständigen Kurt</span><span class="meta">sachverstaendigen-kurt.de</span></div>
       </a>
     </div>
