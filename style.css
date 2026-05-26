@@ -36,30 +36,7 @@ body[data-mood="studio"] {
     --glow-3: transparent;
 }
 
-body[data-mood="warm"] {
-    --bg: #faf2e0;
-    --soft: #f1e4c8;
-    --ink: #2a1810;
-    --muted: #8a7a64;
-    --line: #e8d6b4;
-    --accent: #b8512a;
-    --accent-soft: rgba(184, 81, 42, 0.18);
-    --glow-1: rgba(184, 81, 42, 0.10);
-    --glow-2: rgba(220, 180, 110, 0.24);
-    --glow-3: rgba(180, 140, 80, 0.06);
-}
-
 /* === Hero-Skala === */
-body[data-scale="klassisch"] {
-    --hero-headline: clamp(44px, 8vw, 92px);
-    --hero-headline-mobile: clamp(40px, 12vw, 64px);
-    --hero-sub: clamp(18px, 2.2vw, 22px);
-    --hero-sub-mobile: clamp(17px, 4vw, 20px);
-    --hero-pad-top: clamp(48px, 8vh, 72px);
-    --hero-pad-bottom: clamp(40px, 6vh, 60px);
-    --hero-meta-num: clamp(18px, 2.1vw, 24px);
-}
-
 body[data-scale="ruhig"] {
     --hero-headline: clamp(32px, 5vw, 60px);
     --hero-headline-mobile: clamp(28px, 8vw, 48px);
@@ -68,40 +45,6 @@ body[data-scale="ruhig"] {
     --hero-pad-top: clamp(40px, 6vh, 56px);
     --hero-pad-bottom: clamp(32px, 5vh, 48px);
     --hero-meta-num: clamp(16px, 1.8vw, 20px);
-}
-
-/* === Rotator-Stil === */
-.rot-word {
-    position: relative;
-    display: inline-flex;
-    align-items: flex-end;
-    color: var(--accent);
-    padding: 0 0.04em;
-    transition: color 0.4s, background 0.4s;
-}
-
-body[data-rotator="marker"] .rot-word::after {
-    content: "";
-    position: absolute;
-    left: -0.04em;
-    right: -0.04em;
-    bottom: 0.08em;
-    height: 0.24em;
-    background: linear-gradient(135deg, var(--accent-soft), rgba(21, 128, 61, 0.14));
-    border-radius: 0.18em;
-    z-index: -1;
-    pointer-events: none;
-}
-
-body[data-rotator="box"] .rot-word {
-    background: var(--accent);
-    color: var(--bg);
-    padding: 0 0.16em;
-    border-radius: 0.14em;
-}
-
-.hero-cursor {
-    display: none;
 }
 
 * {
@@ -190,10 +133,6 @@ nav {
     background: var(--ink);
     color: var(--bg);
     border-color: var(--ink);
-}
-
-.nav-cta-dot {
-    display: none;
 }
 
 .nav-cta-icon {
@@ -349,6 +288,9 @@ nav {
 }
 
 .rot-word {
+    position: relative;
+    color: var(--accent);
+    padding: 0 0.04em;
     display: inline-block;
     white-space: nowrap;
     will-change: transform, opacity;
@@ -366,10 +308,6 @@ nav {
     transition: none;
 }
 
-.hero-cursor {
-    display: none !important;
-}
-
 @media (max-width: 720px) {
     .hero-headline {
         flex-wrap: wrap;
@@ -381,11 +319,6 @@ nav {
     }
 }
 
-@keyframes blink {
-    50% {
-        opacity: 0;
-    }
-}
 
 /* CTAs */
 .hero-actions {
