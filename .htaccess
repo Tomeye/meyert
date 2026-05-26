@@ -1,0 +1,9 @@
+RewriteEngine On
+
+# HTTPS erzwingen
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
+
+# www → non-www weiterleiten
+RewriteCond %{HTTP_HOST} ^www\.meyert\.tech$ [NC]
+RewriteRule ^(.*)$ https://meyert.tech/$1 [R=301,L]
