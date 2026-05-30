@@ -1,6 +1,6 @@
 const TWEAKS = {
     mood: "studio",
-    scale: "ruhig",
+    scale: "klar",
     rotator: "plain"
 };
 

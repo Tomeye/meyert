@@ -47,6 +47,16 @@ body[data-scale="ruhig"] {
     --hero-meta-num: clamp(16px, 1.8vw, 20px);
 }
 
+body[data-scale="klar"] {
+    --hero-headline: clamp(44px, 7vw, 88px);
+    --hero-headline-mobile: clamp(36px, 10vw, 60px);
+    --hero-sub: clamp(17px, 2vw, 21px);
+    --hero-sub-mobile: clamp(16px, 4vw, 19px);
+    --hero-pad-top: clamp(64px, 9vh, 96px);
+    --hero-pad-bottom: clamp(56px, 8vh, 80px);
+    --hero-meta-num: clamp(18px, 2vw, 22px);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -145,6 +155,11 @@ nav {
     overflow: hidden;
     padding: var(--hero-pad-top) 0 calc(var(--hero-pad-bottom) + 8px);
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.96) 0%, rgba(255, 255, 255, 0.88) 100%);
+}
+
+body[data-mood="studio"] .hero {
+    background: var(--soft);
+    border-bottom: 1px solid var(--line);
 }
 
 .hero-glow {
@@ -253,7 +268,12 @@ nav {
 
 .hero-headline .hero-pre {
     flex-basis: 100%;
-    margin-bottom: 0;
+    margin-bottom: 16px;
+}
+
+.hero-hook {
+    flex: 0 0 100%;
+    line-height: 1.05;
 }
 
 .hero-post {

@@ -107,6 +107,9 @@
 :root{--bg:#ffffff;--soft:#f5f4ee;--ink:#0f0e0c;--muted:#8a8378;--line:#e4e0d4;--accent:#15803d;--accent-soft:rgba(21,128,61,.18);--whatsapp:#25d366;--glow-1:rgba(21,128,61,.10);--glow-2:rgba(247,166,99,.12);--glow-3:rgba(120,170,210,.08);--hero-headline:clamp(60px,12vw,148px);--hero-headline-mobile:clamp(48px,14vw,88px);--hero-sub:clamp(20px,2.6vw,28px);--hero-sub-mobile:clamp(18px,4.5vw,22px);--hero-pad-top:clamp(56px,10vh,96px);--hero-pad-bottom:clamp(48px,8vh,80px);--hero-meta-num:clamp(20px,2.4vw,28px)}
 body[data-mood=studio]{--bg:#fafaf6;--soft:#efece1;--ink:#1a1612;--muted:#8a8378;--line:#d8d2c2;--accent:#1a1612;--accent-soft:rgba(26,22,18,.10);--glow-1:transparent;--glow-2:transparent;--glow-3:transparent}
 body[data-scale=ruhig]{--hero-headline:clamp(32px,5vw,60px);--hero-headline-mobile:clamp(28px,8vw,48px);--hero-sub:clamp(16px,1.9vw,19px);--hero-sub-mobile:clamp(15px,3.5vw,17px);--hero-pad-top:clamp(40px,6vh,56px);--hero-pad-bottom:clamp(32px,5vh,48px);--hero-meta-num:clamp(16px,1.8vw,20px)}
+body[data-scale=klar]{--hero-headline:clamp(44px,7vw,88px);--hero-headline-mobile:clamp(36px,10vw,60px);--hero-sub:clamp(17px,2vw,21px);--hero-sub-mobile:clamp(16px,4vw,19px);--hero-pad-top:clamp(64px,9vh,96px);--hero-pad-bottom:clamp(56px,8vh,80px);--hero-meta-num:clamp(18px,2vw,22px)}
+body[data-mood=studio] .hero{background:var(--soft);border-bottom:1px solid var(--line)}
+.hero-hook{flex:0 0 100%;line-height:1.05}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;background:var(--bg);color:var(--ink);transition:background .4s ease,color .4s ease}
 body{font-family:ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.5;font-size:16px;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -129,7 +132,7 @@ nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;
 .hero-tag-sep{color:var(--muted)}
 .hero-pre,.hero-post{display:block;font-size:var(--hero-sub);font-weight:400;line-height:1.28;margin:0;color:var(--ink);transition:font-size .4s}
 .hero-pre{color:var(--muted);letter-spacing:.08em;text-transform:uppercase;font-weight:600;margin-bottom:10px}
-.hero-headline .hero-pre{flex-basis:100%;margin-bottom:0}
+.hero-headline .hero-pre{flex-basis:100%;margin-bottom:16px}
 .hero-post{margin-top:16px;max-width:560px;color:var(--muted)}
 .hero-headline{font-size:var(--hero-headline);font-weight:700;line-height:1.02;letter-spacing:-.06em;margin:0;display:flex;align-items:flex-end;flex-wrap:wrap;gap:.16em;transition:font-size .4s,line-height .4s}
 .rotator-wrap{position:relative;display:inline-flex;align-items:flex-end;overflow:hidden;vertical-align:baseline;line-height:1.02;padding:.12em 0 .18em;min-height:1.02em}
@@ -161,7 +164,7 @@ nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;
   <noscript><link rel="stylesheet" href="style.css"></noscript>
 </head>
 
-<body data-mood="studio" data-scale="ruhig" data-rotator="plain">
+<body data-mood="studio" data-scale="klar" data-rotator="plain">
 
   <nav class="reveal r1">
     <a class="brand" href="/">meyert <small>· webdesign</small></a>
@@ -178,14 +181,13 @@ nav{position:sticky;top:0;z-index:10;display:flex;justify-content:space-between;
         <span class="hero-tag-pulse"></span>
         <span id="hero-tag-text">Frei ab Juli 2026</span>
         <span class="hero-tag-sep">·</span>
-        <span id="hero-tag-location">Ostfriesland</span>
+        <span id="hero-tag-location">Leer, Ostfriesland</span>
       </div>
       <h1 class="hero-headline reveal r2">
         <span class="hero-pre" id="hero-pre">Webdesign Leer</span>
-        <span class="rotator-wrap"><span class="rot-word" id="rot">Websites</span></span><span class="hero-cursor"
-          aria-hidden="true"></span>
+        <span class="hero-hook">Kunden finden dich online — oder gar nicht.</span>
       </h1>
-      <p class="hero-post reveal r3" id="hero-post">für Handwerker, Läden und Selbstständige in Leer, Emden, Aurich und ganz Ostfriesland.</p>
+      <p class="hero-post reveal r3" id="hero-post">Professionelle Website für Handwerker und Selbstständige in Leer, Emden, Aurich und ganz Ostfriesland — Festpreis ab 400 €, fertig in 2 Wochen.</p>
 
       <div class="hero-actions reveal r3">
         <a class="cta cta-primary" href="#kontakt" id="hero-cta">

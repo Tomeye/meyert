@@ -2,7 +2,7 @@
   "title": "Webdesign Leer · Ostfriesland | meyert",
   "appearance": {
     "mood": "studio",
-    "scale": "ruhig",
+    "scale": "klar",
     "rotator": "plain"
   },
   "brand": {
@@ -26,14 +26,10 @@
   },
   "hero": {
     "tagText": "auto",
-    "tagLocation": "Ostfriesland",
+    "tagLocation": "Leer, Ostfriesland",
     "pre": "Webdesign Leer",
-    "rotatorWords": [
-      "Websites",
-      "Homepages",
-      "Webseiten"
-    ],
-    "post": "für Handwerker, Läden und Selbstständige in Leer, Emden, Aurich und ganz Ostfriesland.",
+    "rotatorWords": [],
+    "post": "Professionelle Website für Handwerker und Selbstständige in Leer, Emden, Aurich und ganz Ostfriesland — Festpreis ab 400 €, fertig in 2 Wochen.",
     "actions": {
       "primary": "Anfrage stellen",
       "secondary": "Arbeiten ansehen"
